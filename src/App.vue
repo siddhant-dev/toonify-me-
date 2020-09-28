@@ -10,7 +10,7 @@
         <div class="line" :class="{toggle3:!show}"></div>
       </div>
        <ul class="nav-links">
-         <li><a @click="goto('example')">Examples</a></li>
+         <li><a  @click="goto('example')">Examples</a></li>
         <li><a  @click="goto('faq')">FAQ</a></li>
         <li><a @click="goto('about')">About</a></li>
       </ul>
@@ -62,9 +62,9 @@ export default {
         var top = element.offsetTop;
         
         window.scrollTo(0, top-60);
-        this.toggle();
+        if(refName != 'home')
+          this.toggle();
     },
-
     toggle() {
       // const hamburger = document.querySelector(".hamburger");
       const navLinks = document.querySelector(".nav-links");
@@ -94,7 +94,6 @@ nav {
     width: 100%;
     z-index: 50;
   }
-
   .brand{
     color: white;
     font-size: 20px;
@@ -120,14 +119,12 @@ nav {
   text-decoration: none;
   color: white;
 }
-
   
   .nav-links li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
   }
-
 @media screen and (max-width: 768px) {
   .line {
     width: 30px;
@@ -141,7 +138,6 @@ nav {
     width: 100%;
     z-index: 50;
   }
-
   .hamburger {
     position: absolute;
     cursor: pointer;
@@ -150,11 +146,9 @@ nav {
     transform: translate(-5%, -50%);
     z-index: 2;
   }
-
   .components{
     margin-top: 10vh;;
   }
-
   .nav-links {
     position: fixed;
     background: #121a30;
@@ -195,11 +189,9 @@ nav {
     transform: rotate(-45deg) translate(-5px, 6px);
     transition: ease 0.3s;
   }
-
   .toggle2 {
     opacity: 0;
   }
-
   .toggle3{
     transform: rotate(45deg) translate(-5px, -6px);
     transition: ease 0.3s;

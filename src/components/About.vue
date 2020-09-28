@@ -6,7 +6,7 @@
             <a href="https://vuejs.org" target="_blank">Vue JS</a> and <a href="https://deepai.org" target="_blank">Deep AI</a>. 
             <br>
             If you want to learn how this AI model was built trained and deploed head to over 
-            <a href="http://justinpinkney.com" target="_blank"> Justin's blog</a>
+            <a href="http://justinpinkney.com" target="_blank"> Justin's blog</a>   
         </p>
     </div>
 </template>
